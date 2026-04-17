@@ -1,0 +1,1710 @@
+{
+  "tb_ExpTable.tbl": {
+    "targets": [
+      {
+        "table": "exp_table",
+        "cols": [
+          "level",
+          null,
+          "exp",
+          "skill_points",
+          "stat_points",
+          "nature_points",
+          null
+        ]
+      }
+    ]
+  },
+  "tb_SavePoint.tbl": {
+    "targets": [
+      {
+        "table": "save_points",
+        "cols": [
+          "id",
+          null,
+          {
+            "field": "point",
+            "role": "coord_x"
+          },
+          {
+            "field": "point",
+            "role": "coord_y"
+          },
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_gamblingitem.tbl": {
+    "targets": [
+      {
+        "table": "gambling",
+        "cols": [
+          "id",
+          "cost",
+          "drop_id",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_ItemJudgement.tbl": {
+    "targets": [
+      {
+        "table": "item_judgement",
+        "cols": [
+          "id",
+          null,
+          "name",
+          "attack_plus",
+          "accuracy_plus",
+          "str_plus",
+          "dex_plus",
+          "int_plus",
+          "extra_def",
+          "Max_HP",
+          "Max_CHI",
+          "extra_arts_def",
+          "extra_dodge",
+          "extra_attackspeed",
+          "wind_plus",
+          "water_plus",
+          "fire_plus",
+          "extra_arts_range",
+          "ismeretlen",
+          "probabilities"
+        ]
+      }
+    ]
+  },
+  "tb_PetEXPTable.tbl": {
+    "targets": [
+      {
+        "table": "pet_exp_table",
+        "cols": [
+          "level",
+          "req_exp_evo1",
+          "req_exp_evo2",
+          "req_exp_evo3",
+          "req_exp_ht",
+          "req_exp_div_evo1",
+          "req_exp_div_evo2",
+          "req_exp_div_evo3",
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_DropItem.tbl": {
+    "targets": [
+      {
+        "table": "drops",
+        "cols": [
+          "id",
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "probabilities",
+            "role": "array",
+            "filter_zero": true
+          }
+        ]
+      }
+    ]
+  },
+  "tb_ItemSet.tbl": {
+    "targets": [
+      {
+        "table": "item_set",
+        "cols": [
+          "id",
+          null,
+          "itemcount",
+          {
+            "field": "itemsid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "itemsid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "itemsid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "itemsid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "itemsid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "itemsid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "itemsid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "itemsid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "bonusid",
+            "role": "array",
+            "filter_zero": true
+          }
+        ]
+      }
+    ]
+  },
+  "tb_ShopTable.tbl": {
+    "targets": [
+      {
+        "table": "shop_table",
+        "cols": [
+          "id",
+          null,
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "types",
+            "role": "array",
+            "filter_zero": true
+          }
+        ]
+      }
+    ]
+  },
+  "tb_ShopTable_Item.tbl": {
+    "targets": [
+      {
+        "table": "shop_items",
+        "cols": [
+          "type",
+          null,
+          null,
+          null,
+          null,
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "items",
+            "role": "array",
+            "filter_zero": true
+          }
+        ]
+      }
+    ]
+  },
+  "tb_cashshop.tbl": {
+    "targets": [
+      {
+        "table": "ht_shop",
+        "skip_col": 1,
+        "cols": [
+          null,
+          "id",
+          "cash",
+          null,
+          null,
+          null,
+          {
+            "field": "is_active",
+            "role": "bool"
+          },
+          {
+            "field": "is_new",
+            "role": "bool"
+          },
+          "ht_id",
+          null,
+          null,
+          null,
+          {
+            "field": "is_popular",
+            "role": "bool"
+          },
+          null
+        ]
+      }
+    ]
+  },
+  "tb_ItemMelting.tbl": {
+    "targets": [
+      {
+        "table": "item_meltings",
+        "cols": [
+          "id",
+          {
+            "field": "melted_items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "melted_items",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "melted_items",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          {
+            "field": "item_counts",
+            "role": "array",
+            "filter_zero": true
+          },
+          {
+            "field": "item_counts",
+            "role": "array",
+            "filter_zero": true
+          },
+          null,
+          "profit_multiplier",
+          null,
+          null,
+          "probability",
+          "cost",
+          "special_item",
+          "special_probability"
+        ]
+      }
+    ]
+  },
+  "tb_NPC_Script.tbl": {
+    "targets": [
+      {
+        "table": "npc_scripts",
+        "cols": [
+          "id",
+          null,
+          {
+            "field": "script",
+            "role": "json_text"
+          },
+          null
+        ]
+      }
+    ]
+  },
+  "tb_NPCPositionTable.tbl": {
+    "targets": [
+      {
+        "table": "npc_pos_table",
+        "cols": [
+          "id",
+          "npc_id",
+          "map",
+          null,
+          null,
+          null,
+          "rotation",
+          null,
+          {
+            "field": "min_location",
+            "role": "coord_x"
+          },
+          {
+            "field": "min_location",
+            "role": "coord_y"
+          },
+          {
+            "field": "max_location",
+            "role": "coord_x"
+          },
+          {
+            "field": "max_location",
+            "role": "coord_y"
+          },
+          null,
+          "count",
+          "respawn_time",
+          {
+            "field": "is_npc",
+            "role": "bool"
+          },
+          {
+            "field": "attackable",
+            "role": "bool"
+          },
+          "faction",
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_ItemMaking.tbl": {
+    "targets": [
+      {
+        "table": "craft_items",
+        "cols": [
+          "id",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "production",
+          null
+        ]
+      }
+    ]
+  },
+  "tb_ItemMakingEx.tbl": {
+    "targets": [
+      {
+        "table": "craft_items",
+        "cols": [
+          "id",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "production",
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_ItemMakingPI.tbl": {
+    "targets": [
+      {
+        "table": "craft_items",
+        "cols": [
+          "id",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "production",
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_ItemTable_Normal.tbl": {
+    "targets": [
+      {
+        "table": "items",
+        "cols": [
+          "id",
+          null,
+          "name",
+          "uif",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "character_type",
+          "type",
+          "ht_type",
+          "timer_type",
+          null,
+          null,
+          "timer",
+          null,
+          null,
+          "slot",
+          "min_level",
+          "max_level",
+          null,
+          "base_def1",
+          "base_def2",
+          "base_def3",
+          null,
+          "buy_price",
+          "sell_price",
+          null,
+          null,
+          null,
+          {
+            "field": "tradable",
+            "role": "bool"
+          },
+          null,
+          null,
+          "npc_id",
+          "special_item",
+          "base_min_atk",
+          "base_max_atk",
+          "min_atk",
+          "max_atk",
+          "atk_rate",
+          "arts_atk_rate",
+          null,
+          "def",
+          "def_rate",
+          "arts_def",
+          "arts_def_rate",
+          "accuracy",
+          "dodge",
+          "exp_rate",
+          "drop_rate",
+          "str",
+          "dex",
+          "int",
+          "wind",
+          "water",
+          "fire",
+          null,
+          "poison_atk",
+          null,
+          "max_hp",
+          null,
+          "poison_def",
+          null,
+          "max_chi",
+          null,
+          "confusion_atk",
+          null,
+          "min_arts_atk",
+          null,
+          "max_arts_atk",
+          "confusion_def",
+          "hp_recovery",
+          "chi_recovery",
+          "paralysis_atk",
+          null,
+          "running_speed",
+          "item_buff",
+          "paralysis_def",
+          "holy_water_upg1",
+          "holy_water_upg2",
+          null,
+          "holy_water_upg3",
+          "holy_water_rate1",
+          "holy_water_rate2",
+          null,
+          null,
+          "holy_water_rate3",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "field": "tradable",
+            "role": "bool"
+          },
+          null,
+          "min_upgrade_level",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_ItemTable_NPC.tbl": {
+    "targets": [
+      {
+        "table": "items",
+        "cols": [
+          "id",
+          null,
+          "name",
+          null,
+          "type",
+          null,
+          "min_level",
+          "max_level",
+          "slot",
+          null,
+          null,
+          "base_def1",
+          null
+        ]
+      }
+    ]
+  },
+  "tb_ItemTable_appearance.tbl": {
+    "targets": [
+      {
+        "table": "items",
+        "cols": [
+          "id",
+          null,
+          "name",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_SkillTable.tbl": {
+    "targets": [
+      {
+        "table": "skill_definitions",
+        "cols": [
+          "id",
+          null,
+          "name",
+          null,
+          null,
+          null,
+          "passive_type",
+          "type",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "book_id",
+          null,
+          "slot",
+          null,
+          null,
+          "base_duration",
+          "additional_duration",
+          "cast_time",
+          null,
+          "target",
+          "infection_id",
+          "area_center",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "cooldown",
+          "base_chi",
+          "additional_chi",
+          "base_min_multiplier",
+          "additional_min_multiplier",
+          {
+            "field": "passive",
+            "role": "bool"
+          },
+          "base_passive",
+          "additional_passive",
+          "base_max_multiplier",
+          "additional_max_multiplier",
+          "base_radius",
+          null,
+          "additional_radius",
+          "base_passive",
+          null,
+          "max_plus",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_NPCTable.tbl": {
+    "targets": [
+      {
+        "table": "npc_table",
+        "cols": [
+          "id",
+          null,
+          "name",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_PetTable.tbl": {
+    "targets": [
+      {
+        "table": "pets",
+        "cols": [
+          "id",
+          null,
+          "name",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "evolved_id",
+          "evolution",
+          null,
+          "target_level",
+          "base_str",
+          "additional_str",
+          "base_dex",
+          "additional_dex",
+          "base_int",
+          "additional_int",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "base_hp",
+          "additional_hp",
+          "base_chi",
+          "additional_chi",
+          "skill_id",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "level",
+          {
+            "field": "combat",
+            "role": "bool"
+          }
+        ]
+      }
+    ]
+  },
+  "tb_buff_infection.tbl": {
+    "targets": [
+      {
+        "table": "buff_infections",
+        "cols": [
+          "id",
+          null,
+          "name",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "field": "ispercent",
+            "role": "bool"
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "poison_def",
+          "additional_poison_def",
+          "paralysis_def",
+          "additional_para_def",
+          "confusion_def",
+          "additional_confusion_def",
+          "base_def",
+          "additional_def",
+          "arts_def",
+          "additional_arts_def",
+          "max_hp",
+          "hp_recovery_rate",
+          "str",
+          "additional_str",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "dex",
+          "additional_dex",
+          "int",
+          "additional_int",
+          "wind",
+          "additional_wind",
+          "water",
+          "additional_water",
+          "fire",
+          "additional_fire",
+          "accuracy",
+          "additional_accuracy",
+          null,
+          null,
+          "base_atk",
+          "additional_atk",
+          "base_arts_atk",
+          "additional_arts_atk",
+          "additional_hp",
+          "dodge_rate",
+          "additional_dodge_rate",
+          "exp_rate",
+          "hyeolgong_cost",
+          "npc_selling",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "npc_buying",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "max_chi",
+          "movement_speed",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "damage_reflection",
+          "additional_damage_reflection",
+          "taking_effect_probability",
+          "additional_taking_effect_probability",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_production.tbl": {
+    "targets": [
+      {
+        "table": "productions",
+        "cols": [
+          "id",
+          null,
+          null,
+          null,
+          {
+            "field": "materials",
+            "role": "mat_key"
+          },
+          {
+            "field": "materials",
+            "role": "mat_key"
+          },
+          {
+            "field": "materials",
+            "role": "mat_key"
+          },
+          {
+            "field": "materials",
+            "role": "mat_key"
+          },
+          {
+            "field": "materials",
+            "role": "mat_key"
+          },
+          {
+            "field": "materials",
+            "role": "mat_key"
+          },
+          {
+            "field": "materials",
+            "role": "mat_val"
+          },
+          {
+            "field": "materials",
+            "role": "mat_val"
+          },
+          {
+            "field": "materials",
+            "role": "mat_val"
+          },
+          {
+            "field": "materials",
+            "role": "mat_val"
+          },
+          {
+            "field": "materials",
+            "role": "mat_val"
+          },
+          {
+            "field": "materials",
+            "role": "mat_val"
+          },
+          "production",
+          null,
+          null,
+          "probability",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "cost",
+          null
+        ]
+      }
+    ]
+  },
+  "tb_CharacterStatus.tbl": {
+    "targets": [
+      {
+        "table": "job_passives",
+        "cols": [
+          "id",
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
+  "tb_Forging.tbl": {
+    "targets": [
+      {
+        "table": "advanced_fusion",
+        "cols": [
+          null,
+          "item1",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  }
+}

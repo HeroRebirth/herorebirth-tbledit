@@ -1,29 +1,61 @@
-### Installation
+### Hero Rebirth TBL Editor
+An open source TBL Editor for Hero Client, built on top of the syntaxgame foundation with ongoing improvements and refinements. The editor is inteded for the [Hero Rebirth Server](https://github.com/HeroRebirth/herorebirth-server).
 
+### Installation
 ```go
-git clone github.com/syntaxgame/tbledit
-cd tbledit
 go build -o tbledit
 ```
-or
-<a href="https://github.com/syntaxgame/tbledit/releases"> Download a Release</a>.
 
+### Commands and examples
 
-### How to Use?
-You can convert a .tbl file into excel table as following:
+**Export a single `.tbl` to Excel**
 ```
-./tbledit export -i [tbl_file] -o [xlsx_file]
+tbledit export -i tb_cashshop.tbl -o cashshop.xlsx
 ```
 
-After tbl file is exported, you can edit the table on Excel, LibreOffice or Google Drive Sheets.
-
-Finally, you can convert an excel table into .tbl file as following:
+**Import an Excel file back to `.tbl`**
 ```
-./tbledit import -i [xlsx_file] -o [tbl_file]
+tbledit import -i cashshop.xlsx -o tb_cashshop.tbl
 ```
 
-### Example
+**Export all `.tbl` files in a directory to CSV** (required before `analyze` and `seed`)
 ```
-./tbledit export -i tb_cashshop.tbl -o cashshop.xlsx
-./tbledit import -i cashshop.xlsx -o tb_cashshop.tbl
+tbledit export -d data
 ```
+Optional: specify a custom output folder (default is `./tmp`)
+```
+tbledit export -d data --tmp ./tmp
+```
+
+**Analyze exported CSVs against `map.json`** — shows sample values per mapped SQL column so you can verify mappings before seeding
+```
+tbledit analyze
+```
+Optional flags (defaults shown):
+```
+tbledit analyze --tmp ./tmp --map map.json
+```
+
+**Generate the SQL seed file** from exported CSVs — writes `INSERT ... ON DUPLICATE KEY UPDATE` statements for all mapped tables
+```
+tbledit seed
+```
+Optional flags (defaults shown):
+```
+tbledit seed --tmp ./tmp --map map.json -o herorebirth_seed.sql
+```
+
+**Full pipeline** (run from the project root)
+```
+tbledit export -d data
+tbledit analyze
+tbledit seed
+```
+
+## License
+
+See [LICENSE](LICENSE) file.
+
+### Credits
+- Syntaxgame — original foundation
+- All contributors who have helped improve and maintain this project
