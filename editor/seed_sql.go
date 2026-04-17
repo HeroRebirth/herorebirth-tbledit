@@ -222,6 +222,12 @@ func writeInserts(f *os.File, tgt TableTarget, allRows [][]string) (int, error) 
 				case "json_text":
 					escaped, _ := json.Marshal(map[string]string{"text": v})
 					vals[fi] = sqlStr(string(escaped))
+				case "uint8":
+					if n, err := strconv.ParseUint(v, 10, 64); err == nil {
+						vals[fi] = strconv.FormatUint(uint64(uint8(n)), 10)
+					} else {
+						vals[fi] = "0"
+					}
 				default:
 					vals[fi] = numOrStr(v)
 				}

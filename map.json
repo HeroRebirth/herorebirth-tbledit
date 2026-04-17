@@ -1,4 +1,35 @@
 {
+  "tb_ZoneChanGeTable.tbl": {
+    "targets": [
+      {
+        "table": "gates",
+        "cols": [
+          "id",
+          {"field": "target_map", "role": "uint8"},
+          null,
+          null,
+          {"field": "point", "role": "coord_x"},
+          {"field": "point", "role": "coord_y"},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ]
+  },
   "tb_ExpTable.tbl": {
     "targets": [
       {

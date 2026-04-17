@@ -7,6 +7,7 @@
 *.out
 data/
 tmp/
+tmp_zone/
 *.py
 *.sh
 *.sql
