@@ -23,13 +23,10 @@ var errEOF = errors.New("eof")
 //   col_count  UINT32
 //   col_type[] UINT32 × col_count
 //   row_count  UINT32
-//   data_size  UINT32   (= file_size – 4 – col_count*4; spans row_count + row data)
 //   row data …
 //
-// STRING parsing rule: if the column immediately before a STRING column is UINT32
-// AND that UINT32 value is ≤ 65535 (a reasonable string length), that value IS
-// the byte length and the STRING field has no embedded prefix in the data.
-// Otherwise STRING has its own 4-byte embedded length prefix.
+// STRING fields always carry their own 4-byte embedded length prefix immediately
+// before the string bytes; there is no separate data_size header field.
 //
 // Trailing padding: after each row in files that contain at least one STRING
 // column, 4 zero bytes are present and are skipped automatically.
@@ -103,7 +100,6 @@ func ParseTBL(path string) (*TBLFile, error) {
 	if !ok {
 		return nil, errEOF
 	}
-	readU32() // data_size — consumed but not used for bounds checking
 
 	hasString := false
 	for _, ct := range colTypes {
@@ -120,9 +116,6 @@ func ParseTBL(path string) (*TBLFile, error) {
 		row := make([]string, colCount)
 		aborted := false
 
-		var prevU32 uint32
-		var prevType ColType
-
 		for i, ct := range colTypes {
 			switch ct {
 			case BYTE:
@@ -132,7 +125,6 @@ func ParseTBL(path string) (*TBLFile, error) {
 					break
 				}
 				row[i] = strconv.FormatUint(uint64(v), 10)
-				prevType = ct
 
 			case INT16:
 				v, ok := readU16()
@@ -141,7 +133,6 @@ func ParseTBL(path string) (*TBLFile, error) {
 					break
 				}
 				row[i] = strconv.FormatInt(int64(int16(v)), 10)
-				prevType = ct
 
 			case UINT16:
 				v, ok := readU16()
@@ -150,7 +141,6 @@ func ParseTBL(path string) (*TBLFile, error) {
 					break
 				}
 				row[i] = strconv.FormatUint(uint64(v), 10)
-				prevType = ct
 
 			case INT32:
 				v, ok := readU32()
@@ -159,7 +149,6 @@ func ParseTBL(path string) (*TBLFile, error) {
 					break
 				}
 				row[i] = strconv.FormatInt(int64(int32(v)), 10)
-				prevType = ct
 
 			case UINT32:
 				v, ok := readU32()
@@ -168,8 +157,6 @@ func ParseTBL(path string) (*TBLFile, error) {
 					break
 				}
 				row[i] = strconv.FormatUint(uint64(v), 10)
-				prevU32 = v
-				prevType = ct
 
 			case UINT64:
 				v, ok := readU64()
@@ -178,7 +165,6 @@ func ParseTBL(path string) (*TBLFile, error) {
 					break
 				}
 				row[i] = strconv.FormatUint(v, 10)
-				prevType = ct
 
 			case FLOAT:
 				raw, ok := readU32()
@@ -188,21 +174,12 @@ func ParseTBL(path string) (*TBLFile, error) {
 				}
 				f := math.Float32frombits(raw)
 				row[i] = strconv.FormatFloat(float64(f), 'f', -1, 32)
-				prevType = ct
 
 			case STRING:
-				var slen uint32
-				// Use preceding UINT32 as length ONLY if it looks like a valid
-				// string length (≤ 65535). Otherwise read an embedded 4-byte prefix.
-				if prevType == UINT32 && prevU32 <= 65535 {
-					slen = prevU32
-				} else {
-					v, ok := readU32()
-					if !ok {
-						aborted = true
-						break
-					}
-					slen = v
+				slen, ok := readU32()
+				if !ok {
+					aborted = true
+					break
 				}
 				raw, ok := readBytes(int(slen))
 				if !ok {
@@ -210,7 +187,6 @@ func ParseTBL(path string) (*TBLFile, error) {
 					break
 				}
 				row[i] = decodeString(raw)
-				prevType = ct
 
 			default:
 				// Unknown type — treat as fatal (corrupt file)
@@ -220,10 +196,6 @@ func ParseTBL(path string) (*TBLFile, error) {
 
 			if aborted {
 				break
-			}
-
-			if ct != UINT32 {
-				prevU32 = 0
 			}
 		}
 
